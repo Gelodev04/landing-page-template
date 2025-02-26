@@ -9,7 +9,7 @@ export const Icon1 = () => {
       viewBox="0 0 64 64"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      fill="blue"
+      fill="#2174EA"
     >
       <defs>
         <filter
@@ -70,15 +70,15 @@ export const Icon1 = () => {
         ></path>
         <path id="fb1-e" d="M35 20v8h8z"></path>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="fb1-c">
-          <stop stop-color="#FFF" offset="0%"></stop>
-          <stop stop-color="#E2EEFF" offset="100%"></stop>
+          <stop stopColor="#FFF" offset="0%"></stop>
+          <stop stopColor="#E2EEFF" offset="100%"></stop>
         </linearGradient>
       </defs>
       <rect className="ckuoi c6urr" width="64" height="64" rx="32"></rect>
       <use fill="#000" filter="url(#fb1-a)" xlinkHref="#fb1-b"></use>
       <use fill="url(#fb1-c)" xlinkHref="#fb1-b"></use>
       <use fill="#000" filter="url(#fb1-d)" xlinkHref="#fb1-e"></use>
-      <use fill-opacity=".64" fill="#E2EEFF" xlinkHref="#fb1-e"></use>
+      <use fillOpacity=".64" fill="#E2EEFF" xlinkHref="#fb1-e"></use>
     </svg>
   );
 };
