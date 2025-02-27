@@ -21,6 +21,7 @@ export default async function FifthSection() {
         <Image src="/images/target.png" alt="images" width={500} height={500}/>
     </div>
 
+
       <ul className="flex flex-col gap-7">
         {history.map((card: any, index: number) => (
           <li key={index}>
