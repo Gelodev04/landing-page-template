@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { LogoIcon } from "../icons/LogoIcon";
-import { Menu } from "../icons/menu";
+import { LogoIcon } from "./LogoIcon";
+import { Menu } from "./menu";
 
 export default function Navbar() {
   const menuItems = [
@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex justify-between items-center absolute p-3 px-7 w-full">
+    <nav className="flex justify-between items-center absolute p-3 px-7 w-full z-10">
       <LogoIcon />
       <ul className="hidden">
         {menuItems.map((item, index) => (

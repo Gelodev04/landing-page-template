@@ -8,9 +8,9 @@ export const HomeSection = async () => {
   const homeData = data?.data;
 
   return (
-    <div className="h-screen bg-[#1E293B] flex flex-col justify-center items-center text-center px-5 ">
-      <div className="mt-20">
-        <h1 className={`text-[3.1rem] text-[#F1F5F9] font-bold font-playfair`}>
+    <div className="lg:h-screen bg-[#1E293B] flex flex-col justify-center items-center text-center px-5  pb-20" style={{ clipPath: "polygon(0 0, 100% 0, 100% 96%, 0% 100%)" }}>
+      <div className="mt-[10rem]">
+        <h1 className={`text-[3.3rem] text-[#F1F5F9] font-bold font-playfair`}>
           {homeData.H1element}
         </h1>
         <h2 className="text-[1.5rem] text-[#94A3B8] font-inter">
@@ -18,7 +18,7 @@ export const HomeSection = async () => {
         </h2>
       </div>
 
-      <div className="flex flex-col gap-4 w-96  mt-2">
+      <div className="flex flex-col gap-4 w-96  mt-8">
         <button className="text-white bg-[#2174ea] text-xl py-3 rounded font-inter">
           {homeData.Button1}
         </button>

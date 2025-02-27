@@ -7,7 +7,7 @@ export default async function FirstSection() {
   const firstSectionData = data?.data?.FirstSecCard?.card || [];
 
   return (
-    <div className="py-12 px-6 ">
+    <div className="py-12  ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {firstSectionData.map((card: any, index: number) => (
           <div key={index} className="bg-white p-6  rounded-lg space-y-2">
