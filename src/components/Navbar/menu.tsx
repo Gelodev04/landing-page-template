@@ -2,7 +2,7 @@ import React from "react";
 
 export const Menu = () => {
   return (
-    <svg width={30}  fill="#000000" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="white">
+    <svg width={30}  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="white">
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
