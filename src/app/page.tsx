@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
-import { HomeSection } from "@/components/Sections/homesection/Home";
-import FirstSection from "@/components/Sections/firstSection/FirstSection";
-import SecondSection from "@/components/Sections/secondSection/SecondSection";
-import ThirdSection from "@/components/Sections/thirdSection/ThirdSection";
-import { FourthSection } from "@/components/Sections/fourthSection/fourthSection";
+import { HomeSection } from "@/components/Sections/home_section/Home";
+import FirstSection from "@/components/Sections/first_section/FirstSection";
+import SecondSection from "@/components/Sections/second_section/SecondSection";
+import ThirdSection from "@/components/Sections/third_section/ThirdSection";
+import { FourthSection } from "@/components/Sections/fourth_section/fourthSection";
+import FifthSection from "@/components/Sections/fifth_section/FifthSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <FourthSection/>
+      <FifthSection/>
       <div className="h-screen"></div>
     </div>
   );

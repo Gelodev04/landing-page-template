@@ -27,3 +27,9 @@ export async function fetchFourthSection() {
     const content = await data.json();
     return content;
   }
+ 
+  export async function fetchFifthSection() {
+    const data = await fetch("http://localhost:1337/api/fifth-section");
+    const content = await data.json();
+    return content;
+  }  
