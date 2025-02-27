@@ -1,5 +1,5 @@
 import React from "react";
-import fetchHome from "@/utils/fetchHome";
+import {fetchHome} from "@/utils/api";
 import HomeVideo from "../../video/HomeVid";
 import "./home.css"
 

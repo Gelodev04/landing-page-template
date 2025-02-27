@@ -1,14 +1,13 @@
 import React from "react";
-import { Icon1 } from "../icons/FirstSectionIcons";
-import fetchFirstSection from "@/utils/fetchFirstSection";
+import { Icon1 } from "./icons";
+import { fetchFirstSection } from "@/utils/api";
 
 export default async function FirstSection() {
   const data = await fetchFirstSection();
   const firstSectionData = data?.data?.FirstSecCard?.card || [];
 
-  console.log(firstSectionData);
   return (
-    <div className="py-12 px-6">
+    <div className="py-12 px-6 ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {firstSectionData.map((card: any, index: number) => (
           <div key={index} className="bg-white p-6  rounded-lg space-y-2">
@@ -22,8 +21,6 @@ export default async function FirstSection() {
           </div>
         ))}
       </div>
-
-      
     </div>
   );
 }
