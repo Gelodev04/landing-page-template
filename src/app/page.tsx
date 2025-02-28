@@ -6,6 +6,7 @@ import SecondSection from "@/components/Sections/second_section/SecondSection";
 import ThirdSection from "@/components/Sections/third_section/ThirdSection";
 import { FourthSection } from "@/components/Sections/fourth_section/fourthSection";
 import FifthSection from "@/components/Sections/fifth_section/FifthSection";
+import Pricing from "@/components/Sections/pricing/Pricing";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ThirdSection />
       <FourthSection/>
       <FifthSection/>
+      <Pricing/>
       <div className="h-screen"></div>
     </div>
   );
