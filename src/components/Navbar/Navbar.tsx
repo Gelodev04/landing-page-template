@@ -1,19 +1,22 @@
-import React from "react";
+"use client";
 import Link from "next/link";
 import { LogoIcon } from "./LogoIcon";
 import { Menu } from "./menu";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [show, setIsShow] = useState(false);
+
   const menuItems = [
     { name: "Pricing", path: "/" },
     { name: "About", path: "/" },
     { name: "Blog", path: "/" },
     { name: "Wall of Love", path: "/" },
-    { name: "resources", path: "/" },
+    { name: "Resources", path: "/" },
   ];
 
   return (
-    <nav className="flex justify-between items-center absolute p-3 px-7 w-full z-10">
+    <nav className="flex justify-between items-center absolute  w-full z-10 px-4 py-2">
       <LogoIcon />
       <ul className="hidden">
         {menuItems.map((item, index) => (
@@ -24,9 +27,40 @@ export default function Navbar() {
       </ul>
 
       {/* MOBILE RESPONSIVE */}
-      <button>
+      <button onClick={() => setIsShow(!show)} className="md:hidden ">
         <Menu />
       </button>
+
+      {/* Mobile Menu */}
+      {show && (
+        <div
+          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6`}
+        >
+          <div className="space-y-4">
+            {menuItems.map((item, index) => (
+              <p
+                key={index}
+                className={`text-xl text-[#1e293b] font-[500] cursor-pointer ${
+                  index === 3 ? "border-b pb-5" : ""
+                }`}
+              >
+                {item.name}
+              </p>
+            ))}
+          </div>
+
+          <div className="text-[#64748B] py-3 px-5 space-y-2 border-b pb-6">
+            <p className="cursor-pointer">404</p>
+            <p className="cursor-pointer">Support</p>
+          </div>
+
+          <div className="flex justify-center mt-10"> 
+            <button className="text-white bg-[#2174ea] text- py-2 w-[400px] rounded font-inter">
+            <span>Sign in</span>
+                    </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

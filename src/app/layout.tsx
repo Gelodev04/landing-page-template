@@ -1,23 +1,22 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { Playfair_Display, Inter } from "next/font/google";
-
+import { HeroUIProvider } from "@heroui/react";
 // Load Playfair Display with specific weights and subsets
 const playfair = Playfair_Display({
-  subsets: ["latin"], 
+  subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-playfair", 
-  display: "swap", 
+  variable: "--font-playfair",
+  display: "swap",
 });
 
 const inter = Inter({
-  subsets: ["latin"], 
-  weight: ["400", "700"], 
-  variable: "--font-inter", 
-  display: "swap", 
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-inter",
+  display: "swap",
 });
-
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,10 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-       className={`${playfair.variable} ${inter.variable}`}
-      >
-        {children}
+      <body className={`${playfair.variable} ${inter.variable}`}>
+     {children}
       </body>
     </html>
   );

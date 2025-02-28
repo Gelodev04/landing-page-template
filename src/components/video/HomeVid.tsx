@@ -17,7 +17,7 @@ const HomeVideo: React.FC<HomeVideoProps> = ({homeData}) => {
       {!isPlaying ? (
         <div className="relative">
           <Image
-            src="/videos/preview.jpg" // Static preview image
+            src="/images/hero-image-01.jpg" // Static preview image
             alt="Video Preview"
             width={1280}
             height={720}
@@ -40,8 +40,8 @@ const HomeVideo: React.FC<HomeVideoProps> = ({homeData}) => {
           autoPlay
           playsInline
         >
-          <source src="http://localhost:1337/uploads/project3_fffe38882d.mp4" type="video/mp4" />
-          <source src="/videos/landing-video.webm" type="video/webm" />
+          <source src="/videos/video.mp4" type="video/mp4" />
+          
         </video>
       )}
     </div>

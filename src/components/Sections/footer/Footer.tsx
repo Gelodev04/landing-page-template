@@ -8,7 +8,7 @@ export default async function Footer() {
   const footerData = data?.data;
 
   return (
-    <section className="bg-white font-inter mx-4 pt-14">
+    <section className="bg-gray-100 font-inter px-4 pt-14 mt-12">
       <div className="pb-3">
         <LogoIcon />
       </div>
@@ -27,7 +27,7 @@ export default async function Footer() {
                 {Object.entries(links as { [key: string]: string }).map(
                   ([name, url]) => (
                     <li key={name}>
-                      <span className="text-gray-500 hover:underline">
+                      <span className="text-gray-500 active:text-blue-500 active:bg-blue-200  cursor-pointer">
                         {name}
                       </span>
                     </li>

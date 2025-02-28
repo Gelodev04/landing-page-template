@@ -9,10 +9,12 @@ import FifthSection from "@/components/Sections/fifth_section/FifthSection";
 import Pricing from "@/components/Sections/pricing/Pricing";
 import Footer from "@/components/Sections/footer/Footer";
 
+
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      
+      <Navbar/>
       <HomeSection />
       <FirstSection />
       <SecondSection />
@@ -21,6 +23,7 @@ export default function Home() {
       <FifthSection/>
       <Pricing/>
       <Footer/>
+      
     </div>
   );
 }
