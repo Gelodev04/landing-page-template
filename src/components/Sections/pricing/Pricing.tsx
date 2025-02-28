@@ -1,6 +1,6 @@
 import React from "react";
 import { fetchPricingSection } from "@/utils/api";
-import { Arrow } from "./icon";
+import { Arrow, Check } from "./icon";
 
 export default async function Pricing() {
   const data = await fetchPricingSection();
@@ -48,8 +48,9 @@ export default async function Pricing() {
                 <ul className="text-gray-500 space-y-4">
                   <h4 className="text-[#1E293B] mt-3">{plan.features.title}</h4>
                   {plan.features.list.map((feature: any, i: number) => (
-                    <li key={i} className="text-">
-                      ✅ {feature}
+                    <li key={i} className="flex items-center gap-2">
+                        <Check />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>

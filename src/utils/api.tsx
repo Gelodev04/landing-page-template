@@ -39,3 +39,9 @@ export async function fetchPricingSection() {
   const content = await data.json();
   return content;
 }
+
+export async function fetchFooter() {
+  const data = await fetch("http://localhost:1337/api/footer");
+  const content = await data.json();
+  return content;
+}
