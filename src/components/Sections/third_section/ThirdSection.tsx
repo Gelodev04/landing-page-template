@@ -3,6 +3,7 @@ import { fetchThirdSection } from "@/utils/api";
 import { Icon1 } from "./icons";
 import { Card } from "./card";
 import Image from "next/image";
+import "./style.css"
 
 export default async function () {
   const data = await fetchThirdSection();
@@ -25,9 +26,7 @@ export default async function () {
 
      <Card feedback={feedback} />
 
-     <div className="flex justify-center mt-16">
-       <Image className="rounded-md h-auto w-[400px]" src="/images/features2.png" alt="image" width={500} height={500} />
-     </div>
+    
     </div>
   );
 }

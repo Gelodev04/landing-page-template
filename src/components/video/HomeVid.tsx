@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { Icon1 } from "../Sections/home_section/icons";
 
 interface HomeVideoProps {
   homeData: {
@@ -28,9 +29,7 @@ const HomeVideo: React.FC<HomeVideoProps> = ({homeData}) => {
             className="absolute inset-0 flex items-center justify-center"
             onClick={() => setIsPlaying(true)}
           >
-            <span className="rounded-full size-[80px] bg-white flex items-center justify-center bg-opacity-[0.8]">
-              ▶ 
-            </span>
+            <Icon1/> 
           </button>
         </div>
       ) : (

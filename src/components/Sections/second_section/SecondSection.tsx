@@ -1,11 +1,13 @@
 import React from "react";
 import { fetchSecondSection } from "@/utils/api";
-import { Icon1 } from "./icons";
+import { Icon1, Icon2, Icon3, Icon4 } from "./icons";
 import Image from "next/image";
 
 export default async function SecondSection() {
   const data = await fetchSecondSection();
   const secondSectionData = data?.data;
+
+  const icons = [Icon1, Icon2, Icon3, Icon4];
 
   return (
     <div className="h-screen bg-gray-100 text-center px-4 pt-10 font-inter ">
@@ -16,21 +18,25 @@ export default async function SecondSection() {
         {secondSectionData.description}
       </p>
       <ul className="grid grid-cols-2 mt-10">
-        {[...Array(4)].map((_, i) => (
-          <li
-            key={i}
-            className={`text-[#1E293B] flex flex-col justify-center items-center gap-2 mb-7 ${
-              i === 0 ? "opacity-100" : "opacity-50"
-            }`}
-          >
-            <div className="size-fit bg-white rounded-full shadow-md">
-              <Icon1 />
-            </div>
-            <span className="font-semibold text-lg">
-              {secondSectionData.choices}
-            </span>
-          </li>
-        ))}
+        {[...Array(4)].map((_, i) => {
+          const IconComponent = icons[i  % icons.length];
+
+          return (
+            <li
+              key={i}
+              className={`text-[#1E293B] flex flex-col justify-center items-center gap-2 mb-7 ${
+                i === 0 ? "opacity-100" : "opacity-50"
+              }`}
+            >
+              <div className="size-fit bg-white rounded-full shadow-md">
+                <IconComponent/>
+              </div>
+              <span className="font-semibold text-lg">
+                {secondSectionData.choices}
+              </span>
+            </li>
+          );
+        })}
       </ul>
 
       <div className="flex flex-col items-center mt-10">
