@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LogoIcon } from "./LogoIcon";
 import { Menu } from "./menu";
 import { useState } from "react";
+import './style.css'
 
 export default function Navbar() {
   const [show, setIsShow] = useState(false);
@@ -16,7 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex justify-between items-center absolute  w-full z-10 px-4 py-2">
+    <nav className="flex justify-between items-center absolute  w-full z-[999999] px-4 py-2">
       <LogoIcon />
       <ul className="hidden">
         {menuItems.map((item, index) => (
@@ -34,7 +35,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {show && (
         <div
-          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6`}
+          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6 fade-in-top`}
         >
           <div className="space-y-4">
             {menuItems.map((item, index) => (
@@ -54,10 +55,10 @@ export default function Navbar() {
             <p className="cursor-pointer">Support</p>
           </div>
 
-          <div className="flex justify-center mt-10"> 
+          <div className="flex justify-center mt-10">
             <button className="text-white bg-[#2174ea] text- py-2 w-[400px] rounded font-inter">
-            <span>Sign in</span>
-                    </button>
+              <span>Sign in</span>
+            </button>
           </div>
         </div>
       )}
