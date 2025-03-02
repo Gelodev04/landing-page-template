@@ -35,14 +35,14 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {show && (
         <div
-          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6 fade-in-top`}
+          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6 fade-in-top-navbar`}
         >
-          <div className="space-y-4">
+          <div className="space-y-2">
             {menuItems.map((item, index) => (
               <p
                 key={index}
-                className={`text-xl text-[#1e293b] font-[500] cursor-pointer ${
-                  index === 3 ? "border-b pb-5" : ""
+                className={`text-xl text-[#1e293b] font-[500] cursor-pointer py-2 active:bg-opacity-[0.1] active:bg-[#2174ea] active:text-[#2174ea] ${
+                  index === 3 ? "border-b " : ""
                 }`}
               >
                 {item.name}
@@ -50,9 +50,9 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="text-[#64748B] py-3 px-5 space-y-2 border-b pb-6">
-            <p className="cursor-pointer">404</p>
-            <p className="cursor-pointer">Support</p>
+          <div className="text-[#64748B] py-3 px-5 space-y-2 border-b pb-6 ">
+            <p className="cursor-pointer active:text-[#2174ea]">404</p>
+            <p className="cursor-pointer active:text-[#2174ea]">Support</p>
           </div>
 
           <div className="flex justify-center mt-10">

@@ -1,4 +1,4 @@
-@keyframes fade-in-top {
+@keyframes fade-in-top-navbar {
     0% {
       opacity: 0;
       transform: translateY(-20px);
@@ -9,7 +9,7 @@
     }
   }
   
-  .fade-in-top {
-    animation: fade-in-top 0.1s ease-in-out;
+  .fade-in-top-navbar {
+    animation: fade-in-top 0.3s ease-in-out;
   }
   
