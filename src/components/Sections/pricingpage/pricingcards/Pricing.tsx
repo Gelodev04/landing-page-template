@@ -1,22 +1,31 @@
 import React from "react";
 import { fetchPricingSection } from "@/utils/api";
 import { Arrow, Check } from "./icon";
+import Switch from "@/components/ui/switch";
 
 export default async function Pricing() {
   const data = await fetchPricingSection();
   const pricingSectionData = data?.data;
 
   return (
-    <section className="mt-[4rem] font-inter">
+    <section className=" font-inter">
       <div
-        className="bg-[#1E293B] h-[500px] w-full absolute -z-10"
+        className="bg-[#1E293B] h-[800px] w-full absolute -z-10"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 86%, 0% 100%)" }}
       ></div>
 
-      <div className="px-4">
-        <h2 className="text-[2.2rem] text-[#F1F5F9] font-playfair font-bold text-center  py-10">
+      <div className="px-4 pt-[8rem]">
+        <h2 className="text-[2.8rem]   text-[#F1F5F9] font-playfair font-bold text-center  px-10">
           {pricingSectionData.title}
         </h2>
+
+        <div className="flex justify-center text-[#64748B] gap-2 py-12">
+          <p className="">Pay monthly</p>
+          <Switch />
+          <p>
+            Pay Yearly<span className="text-[#10B981]">(-20%)</span>
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {pricingSectionData.card.card.map((plan: any, index: number) => (
@@ -49,7 +58,7 @@ export default async function Pricing() {
                   <h4 className="text-[#1E293B] mt-3">{plan.features.title}</h4>
                   {plan.features.list.map((feature: any, i: number) => (
                     <li key={i} className="flex items-center gap-2">
-                        <Check />
+                      <Check />
                       <span>{feature}</span>
                     </li>
                   ))}

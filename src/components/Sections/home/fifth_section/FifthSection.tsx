@@ -11,7 +11,7 @@ export default async function FifthSection() {
 
   const colors = ["#2174EA", "#F59E0B", "#10B981"]; 
   return (
-    <div className="font-inter px-4">
+    <div className="font-inter px-4 pb-20">
       <div className="text-center">
           <h1 className="font-playfair text-[#1E293B] text-[2.2rem] font-bold">{fifthSectionData.title}</h1>
           <h2 className="text-xl text-[#64748B]">{fifthSectionData.description}</h2>

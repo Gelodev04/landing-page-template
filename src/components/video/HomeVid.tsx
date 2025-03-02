@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Icon1 } from "../Sections/home_section/icons";
+import { Icon1 } from "../Sections/home/home_section/icons";
 
 interface HomeVideoProps {
   homeData: {
@@ -9,10 +9,9 @@ interface HomeVideoProps {
   };
 }
 
-const HomeVideo: React.FC<HomeVideoProps> = ({homeData}) => {
+const HomeVideo: React.FC<HomeVideoProps> = ({ homeData }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
- 
   return (
     <div className="relative w-full max-w-4xl     mx-auto">
       {!isPlaying ? (
@@ -29,7 +28,7 @@ const HomeVideo: React.FC<HomeVideoProps> = ({homeData}) => {
             className="absolute inset-0 flex items-center justify-center"
             onClick={() => setIsPlaying(true)}
           >
-            <Icon1/> 
+            <Icon1 />
           </button>
         </div>
       ) : (
@@ -40,7 +39,6 @@ const HomeVideo: React.FC<HomeVideoProps> = ({homeData}) => {
           playsInline
         >
           <source src="/videos/video.mp4" type="video/mp4" />
-          
         </video>
       )}
     </div>

@@ -3,13 +3,13 @@ import Link from "next/link";
 import { LogoIcon } from "./LogoIcon";
 import { Menu } from "./menu";
 import { useState } from "react";
-import './style.css'
+import "./style.css";
 
 export default function Navbar() {
   const [show, setIsShow] = useState(false);
 
   const menuItems = [
-    { name: "Pricing", path: "/" },
+    { name: "Pricing", path: "/pricing" },
     { name: "About", path: "/" },
     { name: "Blog", path: "/" },
     { name: "Wall of Love", path: "/" },
@@ -17,8 +17,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex justify-between items-center absolute  w-full z-[999999] px-4 py-2">
-      <LogoIcon />
+    <nav className="flex justify-between items-center  absolute w-full z-[999999] px-4 py-2 bg-[#1E293B]">
+      <Link href="/">
+        <LogoIcon />
+      </Link>
       <ul className="hidden">
         {menuItems.map((item, index) => (
           <li className="" key={index}>
@@ -35,18 +37,19 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {show && (
         <div
-          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6 fade-in-top-navbar`}
+          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6 fade-in-top-navbar -z-[99999]`}
         >
           <div className="space-y-2">
             {menuItems.map((item, index) => (
-              <p
-                key={index}
-                className={`text-xl text-[#1e293b] font-[500] cursor-pointer py-2 active:bg-opacity-[0.1] active:bg-[#2174ea] active:text-[#2174ea] ${
-                  index === 3 ? "border-b " : ""
-                }`}
-              >
-                {item.name}
-              </p>
+              <Link key={index} href={item.path}>
+                <p
+                  className={`text-xl text-[#1e293b] font-[500] cursor-pointer py-2 active:bg-opacity-[0.1] active:bg-[#2174ea] active:text-[#2174ea] ${
+                    index === 3 ? "border-b " : ""
+                  }`}
+                >
+                  {item.name}
+                </p>
+              </Link>
             ))}
           </div>
 
