@@ -4,6 +4,7 @@ import { Arrow, Check } from "./icon";
 import Switch from "@/components/ui/switch";
 
 export default async function Pricing() {
+  // Fetch DATa
   const data = await fetchPricingSection();
   const pricingSectionData = data?.data;
 
