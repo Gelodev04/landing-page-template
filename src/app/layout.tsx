@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Playfair_Display, Inter } from "next/font/google";
 import { HeroUIProvider } from "@heroui/react";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Sections/home/footer/Footer";
 // Load Playfair Display with specific weights and subsets
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -30,7 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${inter.variable}`}>
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

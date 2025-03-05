@@ -12,7 +12,6 @@ import Footer from "@/components/Sections/home/footer/Footer";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <HomeSection />
       <FirstSection />
       <SecondSection />
@@ -20,7 +19,6 @@ export default function Home() {
       <FourthSection />
       <FifthSection />
       <Pricing />
-      <Footer />
     </div>
   );
 }
