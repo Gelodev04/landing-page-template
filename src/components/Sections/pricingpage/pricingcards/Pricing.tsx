@@ -32,10 +32,10 @@ export default async function Pricing() {
           {pricingSectionData.card.card.map((plan: any, index: number) => (
             <div
               key={index}
-              className="p-6 border rounded shadow-md bg-white min-h-[500px] flex flex-col relative"
+              className="p-6 border rounded shadow-md bg-white min-h-[500px] flex flex-col relative  mx-auto"
             >
               {index === 1 && (
-                <div className="absolute top-0 left-[20rem] -translate-x-1/2 -translate-y-1/2 bg-[#A7F3D0] text-[#047857] px-4 py-1  rounded-full text-sm font-semibold whitespace-nowrap">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#A7F3D0] text-[#047857] px-4 py-1  rounded-full text-sm font-semibold whitespace-nowrap">
                   Most Popular
                 </div>
               )}
@@ -66,7 +66,7 @@ export default async function Pricing() {
                 </ul>
               </div>
 
-              <button className="bg-[#1D4ED8] text-white py-2 px-5 rounded w-full mt-5 flex items-center justify-center gap-1">
+              <button className="bg-[#1D4ED8] hover:bg-[hsl(224,76%,43%)] duration-75 ease-in text-white py-2 px-5 rounded w-full mt-5 flex items-center justify-center gap-1">
                 <span>Start free trial </span>
                 <span>
                   <Arrow />

@@ -20,7 +20,7 @@ export default async function FirstSection() {
               <h2 className="text-[#1e293b] text-3xl font-bold mb-2 font-playfair">
                 {card.title}
               </h2>
-              <p className="text-[#64748B] text-xl font-inter">
+              <p className="text-[#cad0d9] text-xl font-inter">
                 {card.description}
               </p>
             </div>
