@@ -9,28 +9,29 @@ export const HomeSection = async () => {
 
   return (
     <div
-      className=" bg-[#1E293B] flex flex-col justify-center items-center text-center px-5  pb-20"
-      style={{ clipPath: "polygon(0 0, 100% 0, 100% 96%, 0% 100%)" }}
+      className=" bg-[#1E293B] flex flex-col justify-center items-center text-center px-5  pb-20 xl:flex-row xl:justify-center xl:items-center xl:h-[94vh] xl:text-left  xl:gap-16"
+      style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0% 100%)" }}
     >
-      <div className="mt-[5rem]">
-        <h1 className={`text-[3.3rem] text-[#F1F5F9] font-bold font-playfair`}>
-          {homeData.H1element}
-        </h1>
-        <h2 className="text-[1.5rem] text-[#94A3B8] font-inter">
-          {homeData.Description}
-        </h2>
+      <div className="xl:w-[600px]">
+        <div className="mt-[5rem] max-w-[800px]">
+          <h1 className={`text-[3.3rem] xl:text-[4.5rem] text-[#F1F5F9] font-bold font-playfair`}>
+            {homeData.H1element}
+          </h1>
+          <h2 className="text-[1.5rem] text-[#94A3B8] font-inter">
+            {homeData.Description}
+          </h2>
+        </div>
+        <div className="flex flex-col xl:justify-start justify-center items-center gap-4   mt-8 md:flex-row">
+          <button className="text-white w-96 md:w-64 bg-[#2174ea] hover:bg-[#1D4ED8] duration-100 ease-in text-xl py-4 rounded font-inter">
+            {homeData.Button1}
+          </button>
+          <button className="text-white w-96 md:w-64 bg-[#334155] hover:bg-[hsl(217,33%,25%)] duration-100 ease-in  text-xl py-4 rounded font-inter">
+            {homeData.Button2}
+          </button>
+        </div>
       </div>
 
-      <div className="flex flex-col gap-4 w-96  mt-8">
-        <button className="text-white bg-[#2174ea] text-xl py-3 rounded font-inter">
-          {homeData.Button1}
-        </button>
-        <button className="text-white bg-[#334155] text-xl py-3 rounded font-inter">
-          {homeData.Button2}
-        </button>
-      </div>
-
-      <div className="mt-[5rem] w-full">
+      <div className="mt-[5rem]  max-w-[700px] ">
         <HomeVideo homeData={homeData} />
       </div>
     </div>

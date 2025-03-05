@@ -13,7 +13,7 @@ const HomeVideo: React.FC<HomeVideoProps> = ({ homeData }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="relative w-full max-w-4xl     mx-auto">
+    <div className="relative     ">
       {!isPlaying ? (
         <div className="relative">
           <Image

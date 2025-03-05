@@ -17,17 +17,26 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex justify-between items-center  absolute w-full z-[999999] px-4 py-2 bg-[#1E293B]">
-      <Link href="/">
-        <LogoIcon />
-      </Link>
-      <ul className="hidden">
-        {menuItems.map((item, index) => (
-          <li className="" key={index}>
-            {item.name}
-          </li>
-        ))}
-      </ul>
+    <nav className="flex justify-between items-center  absolute w-full z-[999999] px-5 py-7 bg-[#1E293B]">
+      <div className="flex items-center justify-between max-w-[1300px] w-full mx-auto   text-[#94A3B8] text-xl font-inter">
+        <div className="flex items-center gap-9">
+          <Link href="/">
+            <LogoIcon />
+          </Link>
+        
+        <ul className="hidden  lg:flex gap-12">
+          {menuItems.map((item, index) => (
+            <li className="cursor-pointer hover:text-[#2174EA] duration-100 ease-in" key={index}>
+              {item.name}
+            </li>
+          ))}
+        </ul>
+        </div>
+
+        <div>
+          <p className="cursor-pointer hover:text-[#2174EA] duration-100 ease-in">Sign in</p>
+        </div>
+      </div>
 
       {/* MOBILE RESPONSIVE */}
       <button onClick={() => setIsShow(!show)} className="md:hidden ">
