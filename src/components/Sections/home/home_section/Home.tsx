@@ -2,6 +2,7 @@ import React from "react";
 import { fetchHome } from "@/utils/api";
 import HomeVideo from "../../../video/HomeVid";
 import "./home.css";
+import { Arrow } from "./icons";
 
 export const HomeSection = async () => {
   const data = await fetchHome();
@@ -9,11 +10,13 @@ export const HomeSection = async () => {
 
   return (
     <div
-      className=" bg-[#1E293B] flex flex-col justify-center items-center text-center px-5  pb-20 xl:flex-row xl:justify-center xl:items-center xl:h-[94vh] xl:text-left  xl:gap-16"
-      style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0% 100%)" }}
+      className="  flex flex-col justify-center items-center text-center px-5 w-screen  pb-20 xl:flex-row xl:justify-center xl:items-center xl:h-[100vh] xl:text-left  xl:gap-16 relative bg-[#1E293B]"
+     
     >
+    
+
       <div className="xl:w-[600px]">
-        <div className="mt-[5rem] max-w-[800px]">
+        <div className="pt-[5rem] max-w-[800px]">
           <h1 className={`text-[3.3rem] xl:text-[4.5rem] text-[#F1F5F9] font-bold font-playfair`}>
             {homeData.H1element}
           </h1>
@@ -22,11 +25,13 @@ export const HomeSection = async () => {
           </h2>
         </div>
         <div className="flex flex-col xl:justify-start justify-center items-center gap-4   mt-8 md:flex-row">
-          <button className="text-white w-96 md:w-64 bg-[#2174ea] hover:bg-[#1D4ED8] duration-100 ease-in text-xl py-4 rounded font-inter">
-            {homeData.Button1}
+          <button className="text-white w-[20rem] md:w-64 bg-[#2174ea] hover:bg-[#1D4ED8] duration-100 ease-in text-xl py-4 rounded font-inter flex justify-center items-center gap-1">
+            <span>{homeData.Button1}</span>
+            <span><Arrow/></span>
           </button>
-          <button className="text-white w-96 md:w-64 bg-[#334155] hover:bg-[hsl(217,33%,25%)] duration-100 ease-in  text-xl py-4 rounded font-inter">
-            {homeData.Button2}
+          <button className="text-white w-[20rem] md:w-64 bg-[#334155] hover:bg-[hsl(217,33%,25%)] duration-100 ease-in  text-xl py-4 rounded font-inter flex justify-center items-center gap-1">
+            <span>{homeData.Button2}</span>
+            <span><Arrow/></span>
           </button>
         </div>
       </div>
