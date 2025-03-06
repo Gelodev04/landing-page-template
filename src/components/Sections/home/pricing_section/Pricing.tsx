@@ -64,7 +64,7 @@ export default async function Pricing() {
                 </ul>
               </div>
 
-              <button className="bg-[#1D4ED8] duration-75 ease-in text-white py-2 px-5 rounded w-full mt-5 flex items-center justify-center gap-1">
+              <button className="bg-[#1D4ED8] hover:bg-[hsl(224,76%,43%)] duration-75 ease-in text-white py-2 px-5 rounded w-full mt-5 flex items-center justify-center gap-1">
                 <span>Start free trial </span>
                 <span>
                   <Arrow />

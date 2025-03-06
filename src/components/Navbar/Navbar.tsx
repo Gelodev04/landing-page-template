@@ -27,7 +27,7 @@ export default function Navbar() {
         <ul className="hidden  lg:flex gap-12">
           {menuItems.map((item, index) => (
             <li className="cursor-pointer hover:text-[#2174EA] duration-100 ease-in" key={index}>
-              {item.name}
+              <Link href={item.path}>{item.name}</Link>
             </li>
           ))}
         </ul>
