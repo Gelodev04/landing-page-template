@@ -1,8 +1,7 @@
 import React from "react";
 import { fetchPricingSection } from "@/utils/api";
 import { Arrow, Check } from "./icon";
-import Switch
- from "@/components/ui/switch";
+import Switch from "@/components/ui/switch";
 export default async function Pricing() {
   const data = await fetchPricingSection();
   const pricingSectionData = data?.data;
@@ -15,17 +14,19 @@ export default async function Pricing() {
       ></div>
 
       <div className="px-4 pt-20">
-        <h2 className="text-[2.2rem] text-[#F1F5F9] font-playfair font-bold text-center ">
+        <h2 className="text-[2.3rem] lg:text-[4rem] text-[#F1F5F9] font-playfair font-bold text-center ">
           {pricingSectionData.title}
         </h2>
 
-        <div className="flex justify-center text-[#64748B] gap-2 py-10">
+        <div className="flex justify-center text-[#64748B] gap-2 py-10 lg:py-20">
           <p className="">Pay monthly</p>
-          <Switch/>
-          <p>Pay Yearly<span className="text-[#10B981]">(-20%)</span></p>
+          <Switch />
+          <p>
+            Pay Yearly<span className="text-[#10B981]">(-20%)</span>
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 gap-6 w-auto max-w-[500px] lg:max-w-[1300px] mx-auto">
           {pricingSectionData.card.card.map((plan: any, index: number) => (
             <div
               key={index}
@@ -39,10 +40,10 @@ export default async function Pricing() {
 
               <div className="flex-grow">
                 <div className="border-b pb-1">
-                  <h3 className="text-xl text-[#1E293B] font-semibold">
+                  <h3 className="text-xl lg:text-2xl text-[#1E293B] font-semibold">
                     {plan.title}
                   </h3>
-                  <p className="text-4xl  my-2">
+                  <p className="text-4xl lg:text-5xl  my-2">
                     <span className="text-[#64748B] ">$</span>
                     <span className="text-[#1E293B] font-playfair font-semibold">
                       {plan.price}
@@ -56,7 +57,7 @@ export default async function Pricing() {
                   <h4 className="text-[#1E293B] mt-3">{plan.features.title}</h4>
                   {plan.features.list.map((feature: any, i: number) => (
                     <li key={i} className="flex items-center gap-2">
-                        <Check />
+                      <Check />
                       <span>{feature}</span>
                     </li>
                   ))}

@@ -10,7 +10,7 @@ export const HomeSection = async () => {
 
   return (
     <div
-      className="  flex flex-col justify-center items-center text-center px-5 w-screen  pb-20 xl:flex-row xl:justify-center xl:items-center xl:h-[100vh] xl:text-left  xl:gap-16 relative bg-[#1E293B]"
+      className="  flex flex-col justify-center items-center text-center px-5   pb-20 xl:flex-row xl:justify-center xl:items-center xl:h-[100vh] xl:text-left  xl:gap-16 relative bg-[#1E293B]"
      
     >
     
