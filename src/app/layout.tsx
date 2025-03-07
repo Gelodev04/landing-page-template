@@ -32,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       
+       <Head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </Head>
       <body className={`${playfair.variable} ${inter.variable}`}>
         <Navbar/>
         {children}
