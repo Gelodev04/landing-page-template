@@ -2,6 +2,8 @@ import axios from "axios";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
+
+
 export async function fetchFirstSection() {
   const { data } = await axios.get(`${API_BASE_URL}/api/first-section`);
   return data;
