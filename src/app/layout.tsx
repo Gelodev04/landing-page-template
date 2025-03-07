@@ -23,6 +23,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Landing Page",
   description: "landing page ",
+  icons: {
+    icon: "/favicon.png", 
+  },
 };
 
 export default function RootLayout({
@@ -32,9 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <Head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-      </Head>
+  
       <body className={`${playfair.variable} ${inter.variable}`}>
         <Navbar/>
         {children}
