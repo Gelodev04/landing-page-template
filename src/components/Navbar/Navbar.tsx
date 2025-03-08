@@ -39,14 +39,14 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE RESPONSIVE */}
-      <button onClick={() => setIsShow(!show)} className="md:hidden ">
+      <button onClick={() => setIsShow(!show)} className="lg:hidden ">
         <Menu />
       </button>
 
       {/* Mobile Menu */}
       {show && (
         <div
-          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col md:hidden p-6 fade-in-top-navbar -z-[99999]`}
+          className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col lg:hidden p-6 fade-in-top-navbar -z-[99999]`}
         >
           <div className="space-y-2">
             {menuItems.map((item, index) => (
