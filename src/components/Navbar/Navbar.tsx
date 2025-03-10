@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between items-center  absolute w-full z-[999999] px-5 py-7 bg-[#1E293B]">
-      <div className="flex items-center justify-between max-w-[1300px] w-full mx-auto   text-[#94A3B8] text-xl font-inter ">
+      <div className="flex items-center justify-between max-w-[1200px] w-full mx-auto   text-[#94A3B8] text-lg font-inter ">
         <div className="flex items-center gap-9">
           <Link href="/">
             <LogoIcon />

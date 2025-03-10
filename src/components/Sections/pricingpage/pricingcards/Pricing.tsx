@@ -16,6 +16,7 @@ export default async function Pricing() {
       ></div>
 
       <div className="px-4 pt-[8rem]">
+        
         <h2 className="text-[2.8rem]   text-[#F1F5F9] font-playfair font-bold text-center  px-10">
           {pricingSectionData.title}
         </h2>

@@ -2,6 +2,7 @@ import React from "react";
 import { fetchFooter } from "@/utils/api";
 import { LogoIcon } from "@/components/Navbar/LogoIcon";
 import Contact from "./Contact";
+import ScrollAnimationWrapper from "@/components/ui/ScrollAnimation";
 
 export default async function Footer() {
   const data = await fetchFooter();
@@ -9,6 +10,7 @@ export default async function Footer() {
 
   return (
     <section className="bg-gray-100 font-inter px-4 pt-14 mt-12 ">
+      <ScrollAnimationWrapper animationClass="animate__fadeIn">
       <div className="xl:flex w-auto justify-center gap-20 mx-auto max-w-[1300px] border-b">
         <div className="pb-3 space-y-3">
           <LogoIcon />
@@ -43,6 +45,7 @@ export default async function Footer() {
         <Contact />
         <p className="text-gray-500">© Cruip.com. All rights reserved.</p>
       </div>
+      </ScrollAnimationWrapper>
     </section>
   );
 }

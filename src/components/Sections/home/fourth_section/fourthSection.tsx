@@ -2,6 +2,7 @@ import React from "react";
 import { fetchFourthSection } from "@/utils/api";
 import Image from "next/image";
 import { Icon1 } from "./icons";
+import ScrollAnimationWrapper from "@/components/ui/ScrollAnimation";
 export const FourthSection = async () => {
   const data = await fetchFourthSection();
   const fourthSectionData = data?.data;
@@ -14,36 +15,39 @@ export const FourthSection = async () => {
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 86%, 0% 100%)" }}
       ></div>
 
-      
+      <ScrollAnimationWrapper animationClass="animate__fadeIn">
         <h1 className=" font-playfair text-[#F1F5F9] text-[2.2rem] font-bold text-center px-5 py-14 lg:py-[6rem] lg:text-[3rem]">
           {fourthSectionData.h1text}
         </h1>
+        </ScrollAnimationWrapper>
 
         <ul className="px-5  lg:grid  lg:grid-cols-3 gap-10  w-[500px] lg:w-auto lg:max-w-[1400px]  mx-auto">
           {features.map((feature: any, index: number) => (
-            <li key={index} className="mb-20 relative">
-              <div className="relative inline-block group">
-                <div className="overflow-hidden ">
-                  <Image
-                    className="h-auto relative z-10 group-hover:scale-110 duration-200 ease"
-                    src={feature.img}
-                    alt="image"
-                    width={500}
-                    height={500}
-                  />
+            <ScrollAnimationWrapper  key={index} delay={index * 50}>
+              <li className="mb-20 relative">
+                <div className="relative inline-block group">
+                  <div className="overflow-hidden ">
+                    <Image
+                      className="h-auto relative z-10 group-hover:scale-110 duration-200 ease"
+                      src={feature.img}
+                      alt="image"
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                  <div className="absolute bottom-4 left-3 w-full h-full border-[3px] border-[#1E293B] border-opacity-[0.2] z-0 group-hover:bottom-0 group-hover:left-0 duration-200 ease"></div>
                 </div>
-                <div className="absolute bottom-4 left-3 w-full h-full border-[3px] border-[#1E293B] border-opacity-[0.2] z-0 group-hover:bottom-0 group-hover:left-0 duration-200 ease"></div>
-              </div>
-              <div className="absolute -top-[40px] left-[25px] z-10">
-                <div className="size-[75px] rounded-full bg-[#2174EA]   text-white  font-playfair font-semibold text-[1.7rem] text-center flex justify-center items-center">
-                  {index + 1}
+                <div className="absolute -top-[40px] left-[25px] z-10">
+                  <div className="size-[75px] rounded-full bg-[#2174EA]   text-white  font-playfair font-semibold text-[1.7rem] text-center flex justify-center items-center">
+                    {index + 1}
+                  </div>
                 </div>
-              </div>
-              <h2 className="font-playfair font-semibold text-[#1E293B] text-[1.8rem] py-2">
-                {feature.title}
-              </h2>
-              <p className="text-[#64748B] text-lg">{feature.description}</p>
-            </li>
+                <h2 className="font-playfair font-semibold text-[#1E293B] text-[1.8rem] py-2">
+                  {feature.title}
+                </h2>
+                <p className="text-[#64748B] text-lg">{feature.description}</p>
+              </li>
+            </ScrollAnimationWrapper>
           ))}
         </ul>
     
