@@ -21,7 +21,7 @@ export const FourthSection = async () => {
         </h1>
         </ScrollAnimationWrapper>
 
-        <ul className="px-5  lg:grid  lg:grid-cols-3 gap-10  w-[500px] lg:w-auto lg:max-w-[1400px]  mx-auto">
+        <ul className="px-5  lg:grid  lg:grid-cols-3 gap-10  lg:w-auto lg:max-w-[1400px]  mx-auto">
           {features.map((feature: any, index: number) => (
             <ScrollAnimationWrapper  key={index} delay={index * 50}>
               <li className="mb-20 relative">
