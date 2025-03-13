@@ -2,7 +2,8 @@ import React from "react";
 import { fetchSecondSection } from "@/utils/api";
 import { Icon1, Icon2, Icon3, Icon4 } from "./icons";
 import Image from "next/image";
-import ScrollAnimationWrapper from "@/components/ui/ScrollAnimation";
+import FadeInSection from "@/components/ui/framermotion";
+
 
 export default async function SecondSection() {
   const data = await fetchSecondSection();
@@ -11,17 +12,17 @@ export default async function SecondSection() {
   const icons = [Icon1, Icon2, Icon3, Icon4];
 
   return (
-    <div className=" bg-gray-100 text-center px-4 py-10 font-inter ">
+    <div className=" bg-gray-100 text-center px-4 py-10 font-inter mt-16">
+      <FadeInSection>
       <div className=" max-w-[900px] mx-auto">
-      <ScrollAnimationWrapper>
+
         <h1 className="text-[#1E293B] text-[38px] font-playfair font-[700]">
           {secondSectionData.h1text}
         </h1>
         <p className="text-[#64748B] text-[1.3rem] font-inter mt-3">
           {secondSectionData.description}
         </p>
-        </ScrollAnimationWrapper>
-        <ScrollAnimationWrapper>
+    
           <ul className="grid grid-cols-2 lg:grid-cols-4 mt-10">
             {[...Array(4)].map((_, i) => {
               const IconComponent = icons[i  % icons.length];
@@ -42,10 +43,10 @@ export default async function SecondSection() {
               );
             })}
           </ul>
-        </ScrollAnimationWrapper>
+ 
       </div>
 
-      <ScrollAnimationWrapper>
+
         <div className="flex flex-col items-center mt-10">
           <Image
             className="w-full h-auto max-w-screen max-h-[600px] max-w-[900px] shadow-2xl"
@@ -55,7 +56,7 @@ export default async function SecondSection() {
             alt="image"
           />
         </div>
-      </ScrollAnimationWrapper>
+        </FadeInSection>
       
     </div>
   );
