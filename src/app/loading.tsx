@@ -1,8 +1,9 @@
 
+
 export default function Loading() {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-white z-[9999]">
-        <p className="text-lg font-semibold">Loading...</p>
+      <div className="flex items-center justify-center h-screen">
+        <div className="w-8 h-8 border-4 border-gray-300 border-t-[#2174ea] rounded-full animate-spin "></div>
       </div>
     );
   }

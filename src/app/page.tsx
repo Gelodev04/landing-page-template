@@ -7,10 +7,12 @@ import { FourthSection } from "@/components/Sections/home/fourth_section/fourthS
 import FifthSection from "@/components/Sections/home/fifth_section/FifthSection";
 import Pricing from "@/components/Sections/home/pricing_section/Pricing";
 import Footer from "@/components/Sections/home/footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <div>
+      <Navbar/>
       <HomeSection />
       <FirstSection />
       <SecondSection />

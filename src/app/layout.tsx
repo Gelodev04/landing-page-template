@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
   
       <body className={`${playfair.variable} ${inter.variable}`}>
-        {/* <Navbar/> */}
+         <Navbar/>
         <Suspense fallback={<Loading/>}>{children}</Suspense>
         
        
