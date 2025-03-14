@@ -25,16 +25,16 @@ export const HomeSection = async () => {
               </h2>
             </div>
             <div className="flex flex-col xl:justify-start justify-center items-center gap-4   mt-8 md:flex-row">
-              <button className="text-white w-[20rem] md:w-64 bg-[#2174ea] hover:bg-[#1D4ED8] duration-100 ease-in text-xl py-4 rounded font-inter flex justify-center items-center gap-1">
+              <button className="text-white w-[20rem] md:w-64 bg-[#2174ea] hover:bg-[#1D4ED8] duration-100 ease-in text-xl py-4  rounded font-inter flex justify-center items-center gap-1">
                 <span>{homeData.Button1}</span>
                 <span>
-                  <Arrow />
+                  <Arrow width={24}/>
                 </span>
               </button>
               <button className="text-white w-[20rem] md:w-64 bg-[#334155] hover:bg-[hsl(217,33%,25%)] duration-100 ease-in  text-xl py-4 rounded font-inter flex justify-center items-center gap-1">
                 <span>{homeData.Button2}</span>
                 <span>
-                  <Arrow />
+                  <Arrow width={24}/>
                 </span>
               </button>
             </div>

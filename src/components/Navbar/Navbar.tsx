@@ -5,6 +5,7 @@ import { Menu } from "./menu";
 import { useState } from "react";
 import "./style.css";
 
+
 export default function Navbar() {
   const [show, setIsShow] = useState(false);
 
@@ -34,7 +35,9 @@ export default function Navbar() {
         </div>
 
         <div className="hidden  lg:flex gap-12">
-          <p className="cursor-pointer hover:text-[#2174EA] duration-100 ease-in">Sign in</p>
+          <Link href="/signin">
+            <p className="cursor-pointer hover:text-[#2174EA] duration-100 ease-in">Sign in</p>
+          </Link>
         </div>
       </div>
 
@@ -43,7 +46,7 @@ export default function Navbar() {
         <Menu />
       </button>
 
-      {/* Mobile Menu */}
+
       {show && (
         <div
           className={`absolute top-full left-0 w-full h-screen bg-white shadow-md  flex flex-col lg:hidden p-6 fade-in-top-navbar -z-[99999]`}
@@ -68,9 +71,11 @@ export default function Navbar() {
           </div>
 
           <div className="flex justify-center mt-10">
-            <button className="text-white bg-[#2174ea] text- py-2 w-[400px] rounded font-inter">
-              <span>Sign in</span>
-            </button>
+            <Link href="/signin">
+              <button className="text-white bg-[#2174ea] active:bg-[hsl(215,83%,48%)] text- py-2 w-[400px] rounded font-inter">
+                <span>Sign in</span>
+              </button>
+            </Link>
           </div>
         </div>
       )}
