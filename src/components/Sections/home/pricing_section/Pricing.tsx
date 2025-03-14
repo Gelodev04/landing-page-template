@@ -35,7 +35,7 @@ export default async function Pricing() {
               <FadeInSection key={index}>
                 <div
                   
-                  className="p-6 border rounded shadow-md bg-white min-h-[500px] flex flex-col relative"
+                  className="p-6 border rounded shadow-md h:auto bg-white lg:min-h-[550px] flex flex-col relative"
                 >
                   {index === 1 && (
                     <div className="absolute top-0  left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#A7F3D0] text-[#047857] px-4 py-1  rounded-full text-sm font-semibold whitespace-nowrap">
